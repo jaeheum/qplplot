@@ -213,6 +213,7 @@ Once all is properly installed, try out examples:
     q x01.q
     q x05.q
     q x05w100M.q    # x05.q with 100M data points.
+    q x05w1B.q      # x05.q with 1B data points.
 
 Compare output of examples with the [PLplot's](http://plplot.sourceforge.net/examples.php).
 
@@ -226,6 +227,17 @@ resized, but `xcairo` cannot.
 ## Kdb+ 3.0 or above only
 Qplplot supports Kdb+ 3.0 or later only.
 
+## Linux (CentOS 7) with kdb+ 3 or above, 64-bit (l64)
+
+    gcc -DKXVER=3 \
+        -shared -fPIC qplplot.c -o $HOME/q/l64/qplplot.so \
+        -Wall -Wextra \
+        -Wl,-rpath -Wl,/usr/lib64 \
+        -I/usr/include/ \
+        -I./kx/kdb+3.0/ \
+        -L./kx/kdb+3.0/l64 \
+        `pkg-config --cflags --libs plplotd`
+ 
 ## Linux (Ubuntu 14.04) with kdb+ 3 or above, 32-bit (l32)
 
     # Multi-arch development environment should be installed:
@@ -264,9 +276,7 @@ Qplplot supports Kdb+ 3.0 or later only.
 ## Windows
 PLplot supports Windows but qplplot has not been built nor tested on Windows.
 
-## 64-bit kdb+ support
-Qplplot has not been built nor tested with 64-bit kdb+.
-For 64-bit kdb+,
+## 64-bit kdb+ on 64-bit Ubuntu
 
 * A 64-bit version of PLplot needs to be installed:
     * For example, change `sudo apt-get install ...` on Ubuntu to drop `:i386` suffixes.
