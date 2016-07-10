@@ -1,6 +1,6 @@
 \l qplplot.q
 -1 "Creating 100M data points takes about 5 seconds,";
--1 "but plotting its histogram 500ms on Sandy Bridge";
+-1 "but plotting their histogram 500ms on Sandy Bridge";
 NPTS:100*1000*1000 // 100M floats
 PI:4*atan 1
 delta:2*PI%NPTS

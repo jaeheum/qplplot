@@ -1,6 +1,6 @@
 \l qplplot.q
 -1 "Creating 1B data points takes about 25 seconds,";
--1 "but plotting its histogram 2500ms on Intel(R) Core(TM) i7-6800K CPU @ 3.40GHz";
+-1 "but plotting their histogram 2500ms on Intel(R) Core(TM) i7-6800K CPU @ 3.40GHz";
 
 NPTS:1000*1000*1000 // 1B floats
 PI:4*atan 1
