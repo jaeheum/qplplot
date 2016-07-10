@@ -237,6 +237,7 @@ Qplplot supports Kdb+ 3.0 or later only.
         -I./kx/kdb+3.0/ \
         -L./kx/kdb+3.0/l64 \
         `pkg-config --cflags --libs plplotd`
+    cp qplplot.q plopts.q $HOME/q/
  
 ## Linux (Ubuntu 14.04) with kdb+ 3 or above, 32-bit (l32)
 
